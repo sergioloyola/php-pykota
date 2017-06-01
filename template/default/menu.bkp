@@ -1,0 +1,51 @@
+<!-- Menu -->
+<div id="profile">
+<b id="welcome">Bienvenido : <i><?php echo $login_session; ?></i></b>
+<b id="logout"><a id="salir" href="logout.php">Cerrar Sesion</a></b>
+<b id="perfil"><a id="perfil" href="cambiar_perfil.php">Cambiar Perfil&ensp;&ensp;</a></b>
+</div>
+<div id="wrap"> <!--Caja contenedora-->
+<ul id="navbar"> <!--Lista que define los elementos principales que se muestran siempre-->
+<li><a class="active"  href='profile.php'>Inicio</a> <!--Item principal de menú-->
+</li>
+<li><a href='profile.php'>Usuarios</a> <!--Item principal de menú-->
+<ul> <!--Lista que define subitems de menú que se mostrarán sólo al posicionar el ratón sobre el item principal-->
+<li><a href='listar_usuarios.php'>Lista de Usuarios</a></li> <!--SubItem de menú-->
+<li><a href='usuarios_por_impresora.php'>Usuarios por Impresora</a></li> <!--SubItem de menú-->
+</ul>
+</li>
+<li><a href='profile.php'>Impresoras</a> <!--Item principal de menú-->
+<ul> <!--Lista que define subitems de menú que se mostrarán sólo al posicionar el ratón sobre el item principal-->
+<li><a href='listar_impresora.php'>Listar Impresoras</a></li> <!--SubItem de menú-->
+<li><a href='asignar_cuota.php'>Asignar Cuota</a></li> <!--SubItem de menú-->
+</ul>
+</li>
+<li><a href='profile.php'>Reportes</a> <!--Item principal de menú-->
+<ul> <!--Lista que define subitems de menú que se mostrarán sólo al posicionar el ratón sobre el item principal-->
+<li><a href='impresiones_por_impresora.php'>Impresiones por Impresora</a></li> <!--SubItem de menú-->
+<li><a href='impresiones_por_usuario.php'>Impresiones por Usuario</a></li> <!--SubItem de menú-->
+</ul>
+</li>
+<?php
+if($_SESSION['login_rol'] == '1'){
+
+echo "<li><a href='profile.php'>Configuraciones</a> <!--Item principal de menú-->";
+echo "<ul> <!--Lista que define subitems de menú que se mostrarán sólo al posicionar el ratón sobre el item principal-->";
+echo "<li><a href='crear_usuario.php'>Crear Usuario</a></li> <!--SubItem de menú-->";
+echo "<li><a href='modificar_usuario.php'>Modificar Usuario</a></li> <!--SubItem de menú-->";
+echo "<li><a href='eliminar_usuario.php'>Eliminar Usuario</a></li> <!--SubItem de menú-->";
+echo "<li><a href='crear_grupo.php'>Crear Grupo</a></li> <!--SubItem de menú-->";
+echo "<li><a href='asignar_usuario_a_grupo.php'>Asignar Usuario a Grupo</a></li> <!--SubItem de menú-->";
+echo "<li><a href='crear_usuario_admin.php'>Crear Usuarios administradores</a></li> <!--SubItem de menú-->";
+echo "<li><a href='agregar_impresora.php'>Agregar Impresora</a></li> <!--SubItem de menú-->";
+echo "<li><a href='http://10.22.0.187:631/' target='_blank'>CUPS</a></li> <!--SubItem de menú-->";
+echo "</ul>";
+echo "</li>";
+
+}
+?>
+
+</ul>
+<div class="limpiador"></div> <!--Explicado en apartados anteriores del curso-->
+</div>
+

@@ -1,0 +1,13 @@
+<!--Error401-->
+<?php
+if ($_SESSION['login_rol'] != '1') {
+  echo "<html>";
+  echo "<body bgcolor=#007CC8>";
+  echo "<center><IMG SRC=\"images/401_error.png\"></center>";
+  echo "<center><h1>Acceso denegado</h1></center>";
+  echo "<center><h3>No tiene los privilegios necesarios para acceder a esta aplicación. Si considera que esto no es correcto, consulte el administrador.</h3></center>";
+  echo "</body>";
+  echo "</html>";
+  exit();
+}
+?>
