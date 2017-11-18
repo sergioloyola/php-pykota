@@ -1,0 +1,58 @@
+<?php
+session_start(); // Starting Session
+include('config/config.php');
+$error=''; // Variable To Store Error Message
+if (isset($_POST['submit'])) {
+if (empty($_POST['username']) || empty($_POST['softlimit'])) {
+$error = "Usuario o Correo Invalidos";
+}
+else
+{
+// Define $username and $password
+$username=$_POST['username'];
+$softlimit=$_POST['softlimit'];
+$hardlimit=$_POST['hardlimit'];
+$printername=$_POST['printername'];
+// Establishing Connection with Server by passing server_name, user_id and password as a parameter
+//$connection = mysql_connect("localhost", "root", "dsiredes");
+// To protect MySQL injection for Security purpose
+$username = stripslashes($username);
+$softlimit = stripslashes($softlimit);
+$hardlimit = stripslashes($hardlimit);
+$printername = stripslashes($printername);
+$username = mysql_real_escape_string($username);
+$softlimit = mysql_real_escape_string($softlimit);
+$hardlimit = mysql_real_escape_string($hardlimit);
+$printername = mysql_real_escape_string($printername);
+// Selecting Database
+//$db = mysql_select_db("pykota", $connection);
+
+$resultado = mysql_query("select id from users where username='$username'", $conexion);
+$idusuario = mysql_fetch_row($resultado);
+$resul_print = mysql_query("select id from printers where printername='$printername'", $conexion);
+$id_printer = mysql_fetch_row($resul_print);
+$printerid = $id_printer[0];
+$userid = $idusuario[0];
+$lifepagecounter = "0";
+$pagecounter = "0";
+$softlimit = $softlimit;
+$hardlimit = $hardlimit;
+$datelimit = "";
+$maxjobsize = "";
+$warncount = "0";
+
+$query = mysql_query("select * from userpquota where userid='$userid' and printerid ='$printerid'", $conexion);
+$rows = mysql_num_rows($query);
+if ($rows == 1) {
+$error = "El usuario ya Existe";
+
+} else {
+mysql_query("insert into userpquota (userid, printerid, lifepagecounter, pagecounter, softlimit, hardlimit,  warncount) VALUES('$userid', '$printerid', '$lifepagecounter', '$pagecounter', '$softlimit', '$hardlimit', '$warncount')", $conexion);
+echo "<script type='text/javascript'>alert('Asignación de Cuota, Exitosa!')</script>";
+//header("location: profile.php");
+}
+mysql_close($conexion); // Closing Connection
+}
+}
+?>
+

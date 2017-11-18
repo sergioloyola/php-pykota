@@ -1,6 +1,6 @@
 <?php
 include('login.php'); // Includes Login Script
-
+include('config/config.php');
 if(isset($_SESSION['login_user'])){
 header("location: profile.php");
 }
@@ -8,7 +8,10 @@ header("location: profile.php");
 <html>
 <head>
 <title>Php-Pykota</title>
-<link href="style/login.css" rel="stylesheet" type="text/css">
+        <?php
+        echo "<link href=\"$estilo_login\" rel=stylesheet type=text/css>";
+        ?>
+</head>
 <body class="contenedor">
 	<form action="" method="post">
 		<header>

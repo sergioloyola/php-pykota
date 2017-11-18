@@ -33,8 +33,12 @@ $_SESSION['login_rol']=$rol; // Initializing Session
 historial("SyStem","El usuario a ingresado al sistema",$username,$conexion);
 header("location: profile.php"); // Redirecting To Other Page
 } else {
-$error = "Usuario o contraseña invalidos";
-//echo "<center>Usuario o contraseña invalidos</center>";
+?>
+<script type="text/javascript">
+    alert("Usuario o contraseña Invalido!!!.");
+//     location.href='eliminar_usuario.php?' + Math.random();
+</script>
+<?php
 }
 mysql_close($conexion); // Closing Connection
 }
