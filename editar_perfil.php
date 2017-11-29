@@ -20,6 +20,8 @@ $username = mysql_real_escape_string($username);
 $correo = mysql_real_escape_string($correo);
 $password = mysql_real_escape_string($password);
 $checkpassword = mysql_real_escape_string($checkpassword);
+$password = md5($password);
+$checkpassword = md5($checkpassword);
 
 $resultado = mysql_query("select * from login where usuario='$username'", $conexion);
 $usuario = mysql_fetch_row($resultado);
