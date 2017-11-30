@@ -24,7 +24,7 @@ include('config/config.php');
 			<div class="form-group">
 				<label>Impresora :</label>
 				<?php
-				$link=mysql_connect("localhost","root","dsiredes");
+				$link=mysql_connect("localhost","root","123456");
 				mysql_select_db("pykota",$link);
 				echo"<select class=\"form-control\" name=printername id=printername>";
 				$sql="SELECT printername FROM printers";

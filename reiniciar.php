@@ -16,7 +16,7 @@ if (isset($_POST['reiniciar_todo'])) {
 	$login=$_POST['login'];
 	$groupname = stripslashes($groupname);
 	$tipo = stripslashes($tipo);
-	backup('localhost','root','dsiredes','pykota');
+	backup('localhost','root','123456','pykota');
 	if ($tipo == "usuario"){
 		if ($groupname == "Todos"){
 			reiniciar_todos_los_contadores($conexion);

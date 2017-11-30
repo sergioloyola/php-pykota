@@ -37,7 +37,7 @@ include "template/default/error_401.inc";
 			<label>Perfil :</label>
 			<p id="demo"></p>
 			<?php
-			$link=mysql_connect("localhost","root","dsiredes");
+			$link=mysql_connect("localhost","root","123456");
 			mysql_select_db("pykota",$link);
 			echo "<select class=\"form-control\" name=perfilname id=perfilname onclick=enabledisabletext()>";
 			$sql="SELECT perfil FROM perfiles";
@@ -92,7 +92,7 @@ function validarEmail() {
 		<div class="form-group">
 			<label>Grupo :</label>
 			<?php
-			$link=mysql_connect("localhost","root","dsiredes");
+			$link=mysql_connect("localhost","root","123456");
 			mysql_select_db("pykota",$link);
 			echo"<select class=\"form-control\" name=groupname id=groupname>";
 			$sql="SELECT groupname FROM groups";

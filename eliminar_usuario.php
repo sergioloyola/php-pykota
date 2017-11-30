@@ -22,7 +22,7 @@ include "template/default/error_401.inc";
 	<div class="form-group">
 		<label>Usuario :</label>
 		<?php
-		$link=mysql_connect("localhost","root","dsiredes");
+		$link=mysql_connect("localhost","root","123456");
 		mysql_select_db("pykota",$link);
 		echo"<select class=\"form-control\" name=username id=username>";
 		$sql="SELECT username FROM users";

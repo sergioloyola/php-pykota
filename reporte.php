@@ -21,7 +21,7 @@ $printername=$_POST['printername'];
 $printername = stripslashes($printername);
 $servidor     = "localhost";
 $usuario      = "root";
-$clave          = "dsiredes";
+$clave          = "123456";
 $basedatos = "pykota";
 $conexion=mysql_connect ($servidor, $usuario, $clave) or die ('problema conectando porque :' . mysql_error());
 mysql_select_db($basedatos, $conexion); 

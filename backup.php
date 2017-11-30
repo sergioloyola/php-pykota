@@ -1,7 +1,7 @@
 <?php
 //aca los parametros de conexion, si tienes aparte la conexión , solo incluyuela
 $usuario="root";
-$passwd="dsiredes";
+$passwd="123456";
 $host="localhost";
 $bd="pykota";
 $nombre="pykota-php-backup.sql"; //Este es el nombre del archivo a generar

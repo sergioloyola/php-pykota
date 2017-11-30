@@ -172,7 +172,7 @@ CREATE TABLE `historial` (
   `usuario` varchar(30) NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -181,7 +181,7 @@ CREATE TABLE `historial` (
 
 LOCK TABLES `historial` WRITE;
 /*!40000 ALTER TABLE `historial` DISABLE KEYS */;
-INSERT INTO `historial` VALUES (1,'administrador','reinicio de contadores','','2017-05-30 16:06:00'),(2,'administrador','reinicio de contadores','adrian.balanda','2017-05-30 16:06:47'),(3,'administrador','reinicio de todos los contadores del grupo','SecGen','2017-05-30 16:18:12'),(4,'administrador','reinicio de todos los contadores del grupo','DirPrensa','2017-05-30 16:19:00'),(5,'administrador','Creacion de usuario','gat','2017-05-31 14:47:49'),(6,'administrador','Creacion de usuario','diego.maradona','2017-05-31 14:49:16'),(7,'administrador','Modificacion de usuario','aassi','2017-05-31 14:54:07'),(8,'administrador','Modificacion de usuario','aarce','2017-05-31 14:58:40'),(9,'administrador','Se elimino usuario','aassi','2017-05-31 15:02:52'),(10,'administrador','Creacion de grupo','Prueba','2017-05-31 15:12:04'),(11,'administrador','Creacion de grupo','OtroGrupo','2017-05-31 15:13:54'),(12,'administrador','Se asocio usuario al grupo ','OtroGrupo','2017-05-31 15:24:21'),(13,'administrador','Se asocio usuario: martin.palermo','Prueba','2017-05-31 15:28:22'),(14,'administrador','El usuario fue creado con el perfil: administrador','juancho','2017-05-31 15:38:39'),(15,'administrador','El usuario fue creado con el perfil: administrador','rana','2017-05-31 15:40:11'),(16,'administrador','El usuario fue creado con el perfil: usuarioy grupoPrueba','ramones','2017-05-31 15:41:39'),(17,'administrador','El usuario fue creado con el perfil: usuario y grupo deya','azucar','2017-05-31 15:43:45'),(18,'administrador','Se agrego una nueva impresora','Magin_print','2017-05-31 15:47:38'),(19,'administrador','Asignacion de cuota, softlimit: 25 y hardlimit: 30 en la impresora : ','martin.palermo','2017-05-31 16:01:45'),(20,'administrador','Asignacion de cuota, softlimit: 50 y hardlimit: 55 en la impresora: Magin_print','juan.riquelme','2017-05-31 16:03:32'),(21,'SyStem','El usuario a ingresado al sistema','guadalupe','2017-05-31 16:51:32'),(22,'SyStem','El usuario a ingresado al sistema','administrador','2017-05-31 16:52:15'),(23,'SyStem','El usuario a ingresado al sistema','administrador','2017-05-31 18:22:15'),(24,'SyStem','El usuario a ingresado al sistema','administrador','2017-05-31 19:18:02'),(25,'SyStem','El usuario a ingresado al sistema','administrador','2017-05-31 19:20:49'),(26,'SyStem','El usuario a ingresado al sistema','administrador','2017-05-31 19:43:59'),(27,'SyStem','El usuario a ingresado al sistema','administrador','2017-06-01 16:05:48'),(28,'SyStem','El usuario a ingresado al sistema','administrador','2017-06-01 16:10:27'),(29,'SyStem','El usuario a ingresado al sistema','guadalupe','2017-06-01 16:12:54'),(30,'SyStem','El usuario a ingresado al sistema','administrador','2017-06-01 16:16:55'),(31,'SyStem','El usuario a ingresado al sistema','administrador','2017-06-01 20:53:47'),(32,'SyStem','El usuario a ingresado al sistema','administrador','2017-06-08 18:42:28'),(33,'SyStem','El usuario a ingresado al sistema','administrador','2017-06-08 20:03:38'),(34,'SyStem','El usuario a ingresado al sistema','administrador','2017-06-09 15:50:07'),(35,'SyStem','El usuario a ingresado al sistema','administrador','2017-07-06 18:20:23'),(36,'SyStem','El usuario a ingresado al sistema','administrador','2017-07-06 19:19:29'),(37,'SyStem','El usuario a ingresado al sistema','administrador','2017-07-12 20:54:20'),(38,'SyStem','El usuario a ingresado al sistema','administrador','2017-07-14 18:24:37'),(39,'SyStem','El usuario a ingresado al sistema','guadalupe','2017-09-29 15:57:15');
+INSERT INTO `historial` VALUES (1,'administrador','reinicio de contadores','','2017-05-30 16:06:00'),(2,'administrador','reinicio de contadores','adrian.balanda','2017-05-30 16:06:47'),(3,'administrador','reinicio de todos los contadores del grupo','SecGen','2017-05-30 16:18:12'),(4,'administrador','reinicio de todos los contadores del grupo','DirPrensa','2017-05-30 16:19:00'),(5,'administrador','Creacion de usuario','gat','2017-05-31 14:47:49'),(6,'administrador','Creacion de usuario','diego.maradona','2017-05-31 14:49:16'),(7,'administrador','Modificacion de usuario','aassi','2017-05-31 14:54:07'),(8,'administrador','Modificacion de usuario','aarce','2017-05-31 14:58:40'),(9,'administrador','Se elimino usuario','aassi','2017-05-31 15:02:52'),(10,'administrador','Creacion de grupo','Prueba','2017-05-31 15:12:04'),(11,'administrador','Creacion de grupo','OtroGrupo','2017-05-31 15:13:54'),(12,'administrador','Se asocio usuario al grupo ','OtroGrupo','2017-05-31 15:24:21'),(13,'administrador','Se asocio usuario: martin.palermo','Prueba','2017-05-31 15:28:22'),(14,'administrador','El usuario fue creado con el perfil: administrador','juancho','2017-05-31 15:38:39'),(15,'administrador','El usuario fue creado con el perfil: administrador','rana','2017-05-31 15:40:11'),(16,'administrador','El usuario fue creado con el perfil: usuarioy grupoPrueba','ramones','2017-05-31 15:41:39'),(17,'administrador','El usuario fue creado con el perfil: usuario y grupo deya','azucar','2017-05-31 15:43:45'),(18,'administrador','Se agrego una nueva impresora','Magin_print','2017-05-31 15:47:38'),(19,'administrador','Asignacion de cuota, softlimit: 25 y hardlimit: 30 en la impresora : ','martin.palermo','2017-05-31 16:01:45'),(20,'administrador','Asignacion de cuota, softlimit: 50 y hardlimit: 55 en la impresora: Magin_print','juan.riquelme','2017-05-31 16:03:32'),(21,'SyStem','El usuario a ingresado al sistema','guadalupe','2017-05-31 16:51:32'),(22,'SyStem','El usuario a ingresado al sistema','administrador','2017-05-31 16:52:15'),(23,'SyStem','El usuario a ingresado al sistema','administrador','2017-05-31 18:22:15'),(24,'SyStem','El usuario a ingresado al sistema','administrador','2017-05-31 19:18:02'),(25,'SyStem','El usuario a ingresado al sistema','administrador','2017-05-31 19:20:49'),(26,'SyStem','El usuario a ingresado al sistema','administrador','2017-05-31 19:43:59'),(27,'SyStem','El usuario a ingresado al sistema','administrador','2017-06-01 16:05:48'),(28,'SyStem','El usuario a ingresado al sistema','administrador','2017-06-01 16:10:27'),(29,'SyStem','El usuario a ingresado al sistema','guadalupe','2017-06-01 16:12:54'),(30,'SyStem','El usuario a ingresado al sistema','administrador','2017-06-01 16:16:55'),(31,'SyStem','El usuario a ingresado al sistema','administrador','2017-06-01 20:53:47'),(32,'SyStem','El usuario a ingresado al sistema','administrador','2017-06-08 18:42:28'),(33,'SyStem','El usuario a ingresado al sistema','administrador','2017-06-08 20:03:38'),(34,'SyStem','El usuario a ingresado al sistema','administrador','2017-06-09 15:50:07'),(35,'SyStem','El usuario a ingresado al sistema','administrador','2017-07-06 18:20:23'),(36,'SyStem','El usuario a ingresado al sistema','administrador','2017-07-06 19:19:29'),(37,'SyStem','El usuario a ingresado al sistema','administrador','2017-07-12 20:54:20'),(38,'SyStem','El usuario a ingresado al sistema','administrador','2017-07-14 18:24:37'),(39,'SyStem','El usuario a ingresado al sistema','guadalupe','2017-09-29 15:57:15'),(40,'SyStem','El usuario a ingresado al sistema','administrador','2017-11-18 23:04:24'),(41,'SyStem','El usuario a ingresado al sistema','administrador','2017-11-21 20:45:44'),(42,'SyStem','El usuario a ingresado al sistema','administrador','2017-11-21 21:03:31'),(43,'SyStem','El usuario a ingresado al sistema','administrador','2017-11-21 21:06:33'),(44,'SyStem','El usuario a ingresado al sistema','administrador','2017-11-28 18:06:39'),(45,'SyStem','El usuario a ingresado al sistema','administrador','2017-11-28 19:19:20'),(46,'SyStem','El usuario a ingresado al sistema','administrador','2017-11-28 20:25:24'),(47,'SyStem','El usuario a ingresado al sistema','administrador','2017-11-29 11:57:51'),(48,'SyStem','El usuario a ingresado al sistema','administrador','2017-11-29 14:58:13'),(49,'SyStem','El usuario a ingresado al sistema','administrador','2017-11-29 18:06:50');
 /*!40000 ALTER TABLE `historial` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -243,7 +243,7 @@ DROP TABLE IF EXISTS `login`;
 CREATE TABLE `login` (
   `idusuario` int(11) NOT NULL AUTO_INCREMENT,
   `usuario` varchar(20) NOT NULL,
-  `password` varchar(10) NOT NULL,
+  `password` varchar(34) NOT NULL,
   `perfil` int(2) NOT NULL,
   `email` text NOT NULL,
   `idgroup` int(2) NOT NULL,
@@ -257,7 +257,7 @@ CREATE TABLE `login` (
 
 LOCK TABLES `login` WRITE;
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
-INSERT INTO `login` VALUES (1,'administrador','dsiredes',1,'mailadmin@unq.edu.ar',1),(2,'pepe','pepe',2,'',6),(18,'guadalupe','guadalupe',2,'gavalos@unq.edu.ar',9),(19,'iliana','iliana',2,'iliana.carpi@unq.edu.ar',3),(20,'economia','economia',2,'economia@gmail.com',3),(21,'juancho','12345',1,'juancho@gmail.com',1),(22,'rana','1234',1,'rana@unq.edu.ar',1),(23,'ramones','1234',2,'ramones@gmail.com',11),(24,'azucar','1234',2,'azucar@unq.edu.ar',3);
+INSERT INTO `login` VALUES (1,'administrador','b07d037a8c079d9edc511a445def6463',1,'mailadmin@unq.edu.ar',1),(2,'pepe','926e27eecdbc7a18858b3798ba99bddd',2,'',6),(18,'guadalupe','6c3d51195c4da64ec958c1ed5bb58c9b',2,'gavalos@unq.edu.ar',9),(19,'iliana','7740c188be18aca1000e3442c763663f',2,'iliana.carpi@unq.edu.ar',3),(20,'economia','0dcbfa3e8507c240d9f372a0b8053885',2,'economia@gmail.com',3),(21,'juancho','827ccb0eea8a706c4c34a16891f84e7b',1,'juancho@gmail.com',1),(22,'rana','81dc9bdb52d04dc20036dbd8313ed055',1,'rana@unq.edu.ar',1),(23,'ramones','81dc9bdb52d04dc20036dbd8313ed055',2,'ramones@gmail.com',11),(24,'azucar','81dc9bdb52d04dc20036dbd8313ed055',2,'azucar@unq.edu.ar',3);
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -372,6 +372,30 @@ INSERT INTO `printers` VALUES (1,'ricoh_redes',NULL,0.5,0,'f',0),(2,'Lexmark-lab
 UNLOCK TABLES;
 
 --
+-- Table structure for table `tokens`
+--
+
+DROP TABLE IF EXISTS `tokens`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tokens` (
+  `token` varchar(10) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `used` int(1) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tokens`
+--
+
+LOCK TABLES `tokens` WRITE;
+/*!40000 ALTER TABLE `tokens` DISABLE KEYS */;
+INSERT INTO `tokens` VALUES ('7JJLY8HS5A','mailadmin@unq.edu.ar',1),('M7P6K7NQS2','mailadmin@unq.edu.ar',1),('5CYS7FZUUP','mailadmin@unq.edu.ar',0),('3JJFG5V46Q','',0),('RNQZ6APZQJ','',0),('TWTUW9Q7JZ','',0),('A8L5KDQP3M','',0),('3M7D47JJ32','',0),('VQGLP85RBF','',0),('MUDPRFLA5M','',0),('RWH4DKKGKH','',0),('AEITQTQM82','',0),('BNLNL1G5VQ','mailadmin@unq.edu.ar',1);
+/*!40000 ALTER TABLE `tokens` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `userpquota`
 --
 
@@ -449,4 +473,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-18 14:34:59
+-- Dump completed on 2017-11-29 18:18:54
