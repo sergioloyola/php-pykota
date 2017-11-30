@@ -10,6 +10,7 @@ header("location: profile.php");
 <title>Php-Pykota</title>
         <?php
         echo "<link href=\"$estilo_login\" rel=stylesheet type=text/css>";
+        echo "<link href=\"$estilo_oauth\" rel=stylesheet type=text/css>";
         ?>
 </head>
 <body class="contenedor">
@@ -29,9 +30,17 @@ header("location: profile.php");
     			<!-- <input type="checkbox" checked="checked"> Recordar -->
 		</div>
 		<div class="contenedor" style="background-color:#f1f1f1">
-    			<button type="button" class="cancelbtn">Cancelar</button>
-    			<span class="psw">Olvido su <a href="#">contraseña?</a></span>
+    			<!-- <button type="button" class="cancelbtn">Cancelar</button> -->
+			<center> <a href="cambiodeclave">Olvido su contraseña?</a><center>
   		</div>
+		<center>
+		<button class="loginBtn loginBtn--facebook">
+  			Login con Facebook
+		</button>
+		<button class="loginBtn loginBtn--google">
+			Login con Google
+		</button>
+		</center>
 	</form>
 </body>
 </html>

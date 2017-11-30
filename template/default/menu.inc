@@ -54,6 +54,7 @@ if($_SESSION['login_rol'] == '1'){
                   echo "<li><a href='asignar_usuario_a_grupo.php'>Asignar Usuario a Grupo</a></li>";
                   echo "<li><a href='crear_usuario_admin.php'>Crear Usuarios Administradores</a></li>";
                   echo "<li><a href='agregar_impresora.php'>Agregar Impresora</a></li>";
+		  echo "<li><a href='logs.php'>Logs del sistema</a></li>";
                   echo "<li><a href='reiniciar_contadores.php'>Reinciar Contadores</a></li>";
                   echo "<li><a href='http://10.22.0.187:631/'>CUPS</a></li>";
                 echo "</ul>";

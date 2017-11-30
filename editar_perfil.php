@@ -1,6 +1,7 @@
 <?php
 session_start(); // Starting Session
 include('config/config.php');
+include('config/funciones.php');
 $error=''; // Variable To Store Error Message
 if (isset($_POST['submit'])) {
 if (empty($_POST['username']) || empty($_POST['correo'])) {
@@ -19,6 +20,15 @@ $checkpassword = stripslashes($checkpassword);
 $username = mysql_real_escape_string($username);
 $correo = mysql_real_escape_string($correo);
 $password = mysql_real_escape_string($password);
+$error_password="";
+if (!validar_clave($password, $error_password)){
+    ?>
+    <script type="text/javascript">
+	    alert("PASSWORD NO VÁLIDO: <?php echo $error_password; ?> ");
+    	location.href='cambiar_perfil.php?' + Math.random();
+    </script>
+    <?php
+}
 $checkpassword = mysql_real_escape_string($checkpassword);
 $password = md5($password);
 $checkpassword = md5($checkpassword);

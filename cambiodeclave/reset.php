@@ -2,6 +2,7 @@
 //file reset.php
 //title:Build your own Forgot Password PHP Script
 include('../config/config.php');
+include('../config/funciones.php');
 session_start();
 $token=$_GET['token'];
 include("settings.php");
@@ -18,6 +19,7 @@ If ($email!=''){
 }
 else die("Invalid link or Password already changed");}
 $pass=$_POST['password'];
+$checkpass=$_POST['checkpassword'];
 $email=$_SESSION['email'];
 if(!isset($pass)){
 ?>
@@ -42,24 +44,41 @@ if(!isset($pass)){
 			<label>Ingrese su nueva contraseña:</label>
 			<input class="form-control" id="password" name="password" type="password">
 		</div>
+		<div class="form-group">
+                	<label>Repetir la nueva Contraseña :</label>
+                	<input class="form-control" id="checkpassword" name="checkpassword" placeholder="chequear contraseña" type="password">
+        	</div>
+
 		<input type="submit" class="btn btn-default" value="Cambiar contraseña">
 	</form>
 </body>
 </html>
 <?php
 }
-if(isset($_POST['password'])&&isset($_SESSION['email']))
-{
-$q="update login set password='".md5($pass)."' where email='".$email."'";
-$r=mysql_query($q);
-if($r)mysql_query("update tokens set used=1 where token='".$token."'");
-//echo "Your password is changed successfully";
-?>
-        <script type="text/javascript">
-                alert("Su contraseña se cambio con exito!!!");
-                location.href='../index.php?' + Math.random();
-        </script>
-<?php
+$error_password="";
+if (!validar_clave($pass, $error_password)){
+    ?>
+    <script type="text/javascript">
+            alert("PASSWORD NO VÁLIDO: <?php echo $error_password; ?> ");
+        location.href='reset.php?' + Math.random();
+    </script>
+    <?php
+}
 
-if(!$r)echo "An error occurred";
+if ($pass != "" && $pass == $checkpass)
+{
+	if(isset($_POST['password'])&&isset($_SESSION['email']))
+	{
+		$q="update login set password='".md5($pass)."' where email='".$email."'";
+		$r=mysql_query($q);
+		if($r)mysql_query("update tokens set used=1 where token='".$token."'");
+		?>
+        	<script type="text/javascript">
+                	alert("Su contraseña se cambio con exito!!!");
+                	location.href='../index.php?' + Math.random();
+        	</script>
+		<?php
+
+	if(!$r)echo "An error occurred";
+	}
 }

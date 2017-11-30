@@ -1,0 +1,219 @@
+@import http://fonts.googleapis.com/css?family=Raleway;
+/*----------------------------------------------
+CSS Settings For HTML Div ExactCenter
+------------------------------------------------*/
+body {
+        margin:0;
+        padding:8px;
+/*        background:#588cc1;*/
+        background:#007CC8;
+/*        font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;*/
+        font-family:"Open Sans";
+        font: 62.5%/1.2 Arial, Helvetica,sans-serif
+        color:#555;
+}
+
+#main {
+width:960px;
+margin:50px auto;
+font-family:raleway
+}
+span {
+color:red
+}
+h2 {
+background-color:#FEFFED;
+text-align:center;
+border-radius:10px 10px 0 0;
+margin:-10px -40px;
+padding:10px
+}
+hr {
+border:0;
+border-bottom:1px solid #ccc;
+margin:10px -40px;
+margin-bottom:30px
+}
+#login {
+width:300px;
+float:left;
+border-radius:10px;
+font-family:raleway;
+border:2px solid #ccc;
+padding:10px 40px 25px;
+margin-top:70px
+}
+p {
+color: #000;
+font-size:18px;
+font-family:raleway
+font-weight:bold;
+padding-left:10px;
+
+}
+label {
+color: #000;
+float: left;
+width:94.5%;
+padding:10px;
+margin-top:5px;
+padding-left:1px;
+font-size:16px;
+font-family:raleway
+text-decoration: none;
+}
+input[type=text],input[type=password] {
+width:94.5%;
+padding:10px;
+margin-top:4px;
+border:1px solid #ccc;
+padding-left:5px;
+font-size:16px;
+font-family:raleway
+}
+select {
+width:99.5%;
+padding:10px;
+margin-top:8px;
+border:1px solid #ccc;
+padding-left:5px;
+font-size:16px;
+font-family:raleway
+}
+input[type=submit] {
+width:100%;
+background-color:#FFBC00;
+color:#fff;
+border:2px solid #FFCB00;
+margin-top:20px;
+padding:10px;
+font-size:20px;
+cursor:pointer;
+border-radius:5px;
+margin-bottom:15px
+}
+#input[type=button] {
+width:100%;
+background-color:#FFBC00;
+color:#fff;
+border:2px solid #FFCB00;
+margin-top:20px;
+padding:10px;
+font-size:20px;
+cursor:pointer;
+border-radius:5px;
+margin-bottom:15px
+}
+
+/*#profile {
+padding:50px;
+border:1px dashed grey;
+font-size:20px;
+background-color:#DCE6F7
+}*/
+#profile {
+/*padding:50px;*/
+/*border:1px dashed grey;*/
+font-size:20px;
+background-color:#DCE6F7
+}
+#logout {
+float:right;
+/*padding:5px;*/
+/*border:dashed 1px gray*/
+}
+a {
+text-decoration:none;
+color:#6495ed
+}
+i {
+color:#6495ed
+}
+.navigation {
+  width: 250px;
+}
+
+/* reset our lists to remove bullet points and padding */
+.mainmenu, .submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+/* make ALL links (main and submenu) have padding and background color */
+.mainmenu a {
+  display: block;
+  background-color: #CCC;
+  text-decoration: none;
+  padding: 8px;
+  color: #000;
+
+}
+
+/* add hover behaviour */
+.mainmenu a:hover {
+    background-color: #C5C5C5;
+}
+
+
+/* when hovering over a .mainmenu item,
+  display the submenu inside it.
+  we're changing the submenu's max-height from 0 to 200px;
+*/
+
+.mainmenu li:hover .submenu {
+  display: block;
+  max-height: 300px;
+}
+
+/*
+  we now overwrite the background-color for .submenu links only.
+  CSS reads down the page, so code at the bottom will overwrite the code at the top.
+*/
+
+.submenu a {
+  background-color: #999;
+}
+
+/* hover behaviour for links inside .submenu */
+.submenu a:hover {
+  background-color: #666;
+}
+
+/* this is the initial state of all submenus.
+  we set it to max-height: 0, and hide the overflowed content.
+*/
+.submenu {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-out;
+}
+
+
+.limpiador{padding:0; border-style:none; clear:both; } /*Forzamos a la caja a mostrarse aún conteniendo elementos flotantes*/
+
+table {
+   border-collapse: separate;
+   border-spacing: 5px;
+   color: #fff;
+}
+th, td {
+   width: 25%;
+   text-align: left;
+   vertical-align: top;
+   border: 1px solid #000;
+   border-collapse: collapse;
+   padding: 0.3em;
+   background: #fff;
+   color: #000;
+   caption-side: top;
+}
+caption {
+   padding: 0.3em;
+   color: #fff;
+   background: #000;
+}
+th {
+   background-color: yellow;
+}

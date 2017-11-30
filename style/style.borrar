@@ -1,0 +1,225 @@
+@import http://fonts.googleapis.com/css?family=Raleway;
+/*----------------------------------------------
+CSS Settings For HTML Div ExactCenter
+------------------------------------------------*/
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #333;
+    background-color: #ccc;
+}
+
+#main {
+width:960px;
+margin:50px auto;
+font-family:raleway
+}
+span {
+color:red
+}
+h2 {
+background-color:#FEFFED;
+text-align:center;
+border-radius:10px 10px 0 0;
+margin:-10px -40px;
+padding:10px
+}
+hr {
+border:0;
+border-bottom:1px solid #ccc;
+margin:10px -40px;
+margin-bottom:30px
+}
+#login {
+width:300px;
+float:left;
+border-radius:10px;
+font-family:raleway;
+border:2px solid #ccc;
+padding:10px 40px 25px;
+margin-top:70px
+}
+p {
+color: #000;
+font-size:18px;
+font-family:raleway
+font-weight:bold;
+padding-left:10px;
+
+}
+label {
+color: #000;
+float: left;
+width:94.5%;
+padding:10px;
+margin-top:5px;
+padding-left:1px;
+font-size:16px;
+font-family:raleway
+text-decoration: none;
+}
+input[type=text],input[type=password] {
+width:94.5%;
+padding:10px;
+margin-top:4px;
+border:1px solid #ccc;
+padding-left:5px;
+font-size:16px;
+font-family:raleway
+}
+select {
+width:99.5%;
+padding:10px;
+margin-top:8px;
+border:1px solid #ccc;
+padding-left:5px;
+font-size:16px;
+font-family:raleway
+}
+input[type=submit] {
+width:100%;
+background-color:#FFBC00;
+color:#fff;
+border:2px solid #FFCB00;
+margin-top:20px;
+padding:10px;
+font-size:20px;
+cursor:pointer;
+border-radius:5px;
+margin-bottom:15px
+}
+#input[type=button] {
+width:100%;
+background-color:#FFBC00;
+color:#fff;
+border:2px solid #FFCB00;
+margin-top:20px;
+padding:10px;
+font-size:20px;
+cursor:pointer;
+border-radius:5px;
+margin-bottom:15px
+}
+
+/*#profile {
+padding:50px;
+border:1px dashed grey;
+font-size:20px;
+background-color:#DCE6F7
+}*/
+#profile {
+/*padding:50px;*/
+/*border:1px dashed grey;*/
+font-size:20px;
+background-color:#DCE6F7
+}
+#perfil {
+float:right;
+}
+#logout {
+float:right;
+/*padding:5px;*/
+/*border:dashed 1px gray*/
+}
+
+a {
+text-decoration:none;
+color:#6495ed
+}
+i {
+color:#6495ed
+}
+/* Para menu */
+/*h2 {margin:0;}*/
+
+/*Caja contenedora*/
+#wrap { 
+font-size: 1.2em; 
+/*width: 680px;*/ 
+/*padding: 10px;*/
+margin: 0 auto; /*Da lugar al centrado de la caja en el elemento superior body*/
+background-color: #DCE6F7;}
+
+
+/* Estilos que crean el menú desplegable */
+/*Eliminamos padding y margin que introducen navegadores por defecto en listas*/
+#navbar { padding:0; margin:0; }
+
+/*Elementos items principales de menú que se muestran siempre*/
+#navbar li { list-style: none; float: left; margin:10px;}
+
+#navbar li a {
+   display: block; /* Usamos display block para poder aplicar propiedades de caja a links */
+   padding: 3px 8px; 
+   /*background-color: #5e8ce9; */
+   text-decoration: none; 
+   color: #000;
+}
+
+/*Listas de subitems de menú*/
+#navbar li ul {
+   display: none; /*La lista inicialmente no se muestra debido a display:none; */
+    background-color: #DCE6F7;
+
+}
+#navbar li:hover ul {
+   font-size: 12px;
+   display: block; /*Al situar el cursor sobre el item la lista de subitems pasa de display none a display block y se muestra*/
+   position: absolute; /*Al desplegarse el submenú no ocupa espacio y no desplaza a otros elementos gracias a que establecemos position absolute*/
+   margin: 0; padding: 0; /*Anulamos margin y padding que por defecto introducen navegadores*/
+   }
+#navbar li:hover li { float: none; } /*Anulamos el float left que define el elemento padre para que los subitems se muestren en vertical */
+
+/*Creamos la apariencia de los subitems de menú, color de fondo, borde inferior, color de texto*/
+#navbar li:hover li a { background-color: #DCE6F7; border-bottom: 1px solid #fff; color: #000; }
+
+/*Creamos el efecto de cambio de color y aspecto cuando ponemos el puntero del ratón sobre un subitem de menú*/
+#navbar li li a:hover { 
+    background-color: #C5C5C5; 
+    }
+
+.limpiador{
+    padding:0; 
+    border-style:none; 
+    clear:both; 
+    } 
+
+table {
+   border-collapse: separate;
+   border-spacing: 5px;
+   color: #fff;
+}
+th, td {
+   width: 25%;
+   text-align: left;
+   vertical-align: top;
+   border: 1px solid #000;
+   border-collapse: collapse;
+   padding: 0.3em;
+   background: #fff;
+   color: #000;
+   caption-side: top;
+}
+caption {
+   padding: 0.3em;
+   color: #fff;
+   background: #000;
+}
+th {
+   background-color: yellow;
+}
+
+footer {
+   position: fixed;
+   bottom: 0;
+   width: 98%;
+   font-size: 1.0em;
+   font-weight: bolder;
+   color: #FFF;
+   text-align: center;
+   background-color: #DCE6F7;
+   padding:10px; 
+   height: 20px;
+}
+
